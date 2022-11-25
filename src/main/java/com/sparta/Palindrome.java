@@ -1,6 +1,7 @@
 package com.sparta;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Palindrome {
@@ -37,6 +38,9 @@ public class Palindrome {
     }
 
     public static List<String> isPalindromeArray(String[] input) {
+        if (input.length == 0) {
+            return Collections.emptyList();
+        }
         List<String> result = new ArrayList<>();
         for (String s : input) {
             s.replaceAll("\\s+", "").toLowerCase();
